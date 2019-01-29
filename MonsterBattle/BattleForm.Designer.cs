@@ -33,15 +33,16 @@
             this.attackButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.enemyLevel = new System.Windows.Forms.Label();
             this.enemyHealthPictureBox = new System.Windows.Forms.PictureBox();
             this.enemyPictureBox = new System.Windows.Forms.PictureBox();
             this.friendlyPictureBox = new System.Windows.Forms.PictureBox();
             this.attackTimer = new System.Windows.Forms.Timer(this.components);
-            this.enemyLevel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.screenShakeTimer = new System.Windows.Forms.Timer(this.components);
+            this.attackButton1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +56,7 @@
             // 
             this.attackButton.Location = new System.Drawing.Point(12, 230);
             this.attackButton.Name = "attackButton";
-            this.attackButton.Size = new System.Drawing.Size(190, 61);
+            this.attackButton.Size = new System.Drawing.Size(117, 34);
             this.attackButton.TabIndex = 1;
             this.attackButton.Text = "Lightningstrike";
             this.attackButton.UseVisualStyleBackColor = true;
@@ -86,6 +87,16 @@
             this.panel3.Size = new System.Drawing.Size(191, 53);
             this.panel3.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(163, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "1";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -109,6 +120,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(190, 49);
             this.panel2.TabIndex = 2;
+            // 
+            // enemyLevel
+            // 
+            this.enemyLevel.AutoSize = true;
+            this.enemyLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enemyLevel.Location = new System.Drawing.Point(153, 9);
+            this.enemyLevel.Name = "enemyLevel";
+            this.enemyLevel.Size = new System.Drawing.Size(14, 13);
+            this.enemyLevel.TabIndex = 4;
+            this.enemyLevel.Text = "1";
             // 
             // enemyHealthPictureBox
             // 
@@ -151,36 +172,27 @@
             this.attackTimer.Interval = 1000;
             this.attackTimer.Tick += new System.EventHandler(this.attackTimer_Tick);
             // 
-            // enemyLevel
-            // 
-            this.enemyLevel.AutoSize = true;
-            this.enemyLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enemyLevel.Location = new System.Drawing.Point(153, 9);
-            this.enemyLevel.Name = "enemyLevel";
-            this.enemyLevel.Size = new System.Drawing.Size(14, 13);
-            this.enemyLevel.TabIndex = 4;
-            this.enemyLevel.Text = "1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "1";
-            // 
             // screenShakeTimer
             // 
             this.screenShakeTimer.Interval = 50;
             this.screenShakeTimer.Tick += new System.EventHandler(this.screenShakeTimer_Tick);
+            // 
+            // attackButton1
+            // 
+            this.attackButton1.Location = new System.Drawing.Point(135, 230);
+            this.attackButton1.Name = "attackButton1";
+            this.attackButton1.Size = new System.Drawing.Size(117, 34);
+            this.attackButton1.TabIndex = 2;
+            this.attackButton1.Text = "Thunder";
+            this.attackButton1.UseVisualStyleBackColor = true;
+            this.attackButton1.Click += new System.EventHandler(this.attackButton1_Click);
             // 
             // BattleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 303);
+            this.Controls.Add(this.attackButton1);
             this.Controls.Add(this.attackButton);
             this.Controls.Add(this.panel1);
             this.Name = "BattleForm";
@@ -212,6 +224,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label enemyLevel;
         private System.Windows.Forms.Timer screenShakeTimer;
-    }
+    private System.Windows.Forms.Button attackButton1;
+  }
 }
 

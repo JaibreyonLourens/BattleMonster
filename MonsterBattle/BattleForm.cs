@@ -24,7 +24,7 @@ namespace MonsterBattle
 
         private void attackButton_Click(object sender, EventArgs e)
         {
-            feif (!enemyDead)
+            if(!enemyDead)
             {
                 enemyPictureBox.Tag = enemyPictureBox.Image;
                 enemyPictureBox.Image = Properties.Resources.attack_lightning;
@@ -64,5 +64,13 @@ namespace MonsterBattle
             this.Top += randomGenerator.Next(-5, 6);
             this.Left += randomGenerator.Next(-5, 6);
         }
+
+    private void attackButton1_Click(object sender, EventArgs e)
+    {
+      if (!enemyDead)
+      {
+
+      }
     }
+  }
 }

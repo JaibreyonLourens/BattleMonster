@@ -159,6 +159,13 @@
         z8l9Ife61bPQ0OMaaGkciAP0bWmcxGkDlYhDy6GDDvMrVD9wOp8d89QaDgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAADCAIAAADqcT3hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS41ZEdYUgAAAB5JREFUOE9jiLjQ
+        MIqIRAwFP1aMIiLRaGARjX6sAADcXEI/pudpbwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="panel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAAAdCAYAAABcz8ldAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -170,6 +177,13 @@
         Vg0yECn2hJzdHbPXByF6/RpBBuaFzNUaCmkg5OYzZEKCrlPkvXitiIwfbVC1FAL4Leu7SwCyfrSvPgrh
         BlUbdHcIc1KiEDGIxbBKloMskSlkSHeUSOHffxqSE6HJSYmDSCG/TyplLKagrPZoKXcCclBKe0RKVsAU
         WEQ57TicjuEL4tbZ4D+HpK4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="enemyHealthPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAADCAIAAADqcT3hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS41ZEdYUgAAAB5JREFUOE9jiLjQ
+        MIqIRAwFP1aMIiLRaGARjX6sAADcXEI/pudpbwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="enemyPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -227,20 +241,6 @@
         MtipkvM1wzyI9zoq50IRn1MvRijhk+GOBCXggbwPtex8i9irhWaIxU2P7L+BDAkyLIaizxE5F8lQVmdV
         aKHgW4J6IxioYAr3SDmImWFVyFjIjUrOrwoHe+UykYyYWaRFpym3IQlH5DKJFjHzf6bTP80ogamortdv
         AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAAADCAIAAADqcT3hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS41ZEdYUgAAAB5JREFUOE9jiLjQ
-        MIqIRAwFP1aMIiLRaGARjX6sAADcXEI/pudpbwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="enemyHealthPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAAADCAIAAADqcT3hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS41ZEdYUgAAAB5JREFUOE9jiLjQ
-        MIqIRAwFP1aMIiLRaGARjX6sAADcXEI/pudpbwAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="attackTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
