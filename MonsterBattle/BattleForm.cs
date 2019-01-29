@@ -15,6 +15,8 @@ namespace MonsterBattle
         Random randomGenerator;
         bool enemyDead;
         bool enemysTurn = false;
+        bool playerDead;
+
 
         public BattleForm()
         {
@@ -23,11 +25,29 @@ namespace MonsterBattle
             randomGenerator = new Random();
         }
 
+        private void enemyAttack()
+        {
+            if (!enemyDead)
+            {
+                if (!playerDead)
+                {
+                    friendlyPictureBox.Tag = friendlyPictureBox.Image;
+                    friendlyPictureBox.Image = Properties.Resources.attack_lightning;
+
+                    enemyAttackTimer.Start();
+
+                    screenShakeTimer.Start();
+                }
+                
+            }
+            
+        }
         private void turnBasedAttack()
         {
             if (enemysTurn)
             {
-                MessageBox.Show("attack");
+                enemyAttack();
+                
                 enemysTurn = false;
             }
             else
@@ -76,6 +96,7 @@ namespace MonsterBattle
 
                     screenShakeTimer.Start();
                 }
+                
                 else
                 {
                     MessageBox.Show("You can not strike Charizard whilst he is already down.");
@@ -88,6 +109,7 @@ namespace MonsterBattle
                 attackButton.Enabled = true;
                 attackButton1.Enabled = true;
             }
+         
         }
 
         private void attackButton1_Click(object sender, EventArgs e)
@@ -134,6 +156,23 @@ namespace MonsterBattle
                 enemyDead = true;
                 enemyPictureBox.Image = null;
               }
+        }
+
+        private void enemyAttackTimer_Tick(object sender, EventArgs e)
+        {
+            screenShakeTimer.Stop();
+            enemyAttackTimer.Stop();
+
+            friendlyPictureBox.Image = (Image)friendlyPictureBox.Tag;
+
+            friendlyHealthPictureBox.Width -= 20;
+
+            if (friendlyHealthPictureBox.Width <= 0)
+            {
+                MessageBox.Show("Zapdos has fainted!");
+                playerDead = true;
+                friendlyPictureBox.Image = null;
+            }
         }
     }
 }

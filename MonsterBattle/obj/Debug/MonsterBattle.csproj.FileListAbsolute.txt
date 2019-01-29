@@ -28,3 +28,13 @@ C:\Users\Sandra\Desktop\Applicatie ontwikkelaar\Programmeren\Csharp\Projecten\pe
 C:\Users\Sandra\Desktop\Applicatie ontwikkelaar\Programmeren\Csharp\Projecten\periode 3\Monsterbattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csproj.CoreCompileInputs.cache
 C:\Users\Sandra\Desktop\Applicatie ontwikkelaar\Programmeren\Csharp\Projecten\periode 3\Monsterbattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.exe
 C:\Users\Sandra\Desktop\Applicatie ontwikkelaar\Programmeren\Csharp\Projecten\periode 3\Monsterbattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.pdb
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\bin\Debug\MonsterBattle.exe.config
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\bin\Debug\MonsterBattle.exe
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\bin\Debug\MonsterBattle.pdb
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csprojAssemblyReference.cache
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.BattleForm.resources
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.Properties.Resources.resources
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csproj.GenerateResource.cache
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csproj.CoreCompileInputs.cache
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.exe
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.pdb
