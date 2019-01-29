@@ -107,5 +107,8 @@
   <ItemGroup>
     <None Include="Resources\attack_lightning.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\flameburst.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
