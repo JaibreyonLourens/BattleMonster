@@ -67,9 +67,37 @@ namespace MonsterBattle
 
     private void attackButton1_Click(object sender, EventArgs e)
     {
-      if (!enemyDead)
-      {
+        if (!enemyDead)
+        {
+          enemyPictureBox.Tag = enemyPictureBox.Image;
+          enemyPictureBox.Image = Properties.Resources.attack_lightning;
 
+          attackButton1.Enabled = false;
+          attackTimer1.Start();
+
+          screenShakeTimer.Start();
+        }
+        else
+        {
+          MessageBox.Show("You already won CALM DOWN!!");
+        }
+    }
+
+    private void attackTimer1_Tick(object sender, EventArgs e)
+    {
+      screenShakeTimer.Stop();
+      attackTimer1.Stop();
+      attackButton1.Enabled = true;
+
+      enemyPictureBox.Image = (Image)enemyPictureBox.Tag;
+
+      enemyHealthPictureBox.Width -= 35;
+
+      if (enemyHealthPictureBox.Width <= 0)
+      {
+        MessageBox.Show("Charizard has fainted!");
+        enemyDead = true;
+        enemyPictureBox.Image = null;
       }
     }
   }

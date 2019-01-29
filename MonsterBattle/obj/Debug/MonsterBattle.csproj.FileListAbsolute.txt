@@ -8,3 +8,13 @@ D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\De
 D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csproj.CoreCompileInputs.cache
 D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.exe
 D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.pdb
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\bin\Debug\MonsterBattle.exe.config
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\bin\Debug\MonsterBattle.exe
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\bin\Debug\MonsterBattle.pdb
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csprojAssemblyReference.cache
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.BattleForm.resources
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.Properties.Resources.resources
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csproj.GenerateResource.cache
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.exe
+C:\Users\Gebruiker\OneDrive\Source-code\blueasy\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.pdb

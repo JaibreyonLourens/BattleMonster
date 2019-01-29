@@ -43,6 +43,7 @@
             this.attackTimer = new System.Windows.Forms.Timer(this.components);
             this.screenShakeTimer = new System.Windows.Forms.Timer(this.components);
             this.attackButton1 = new System.Windows.Forms.Button();
+            this.attackTimer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -187,6 +188,11 @@
             this.attackButton1.UseVisualStyleBackColor = true;
             this.attackButton1.Click += new System.EventHandler(this.attackButton1_Click);
             // 
+            // attackTimer1
+            // 
+            this.attackTimer1.Interval = 500;
+            this.attackTimer1.Tick += new System.EventHandler(this.attackTimer1_Tick);
+            // 
             // BattleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +231,7 @@
         private System.Windows.Forms.Label enemyLevel;
         private System.Windows.Forms.Timer screenShakeTimer;
     private System.Windows.Forms.Button attackButton1;
+    private System.Windows.Forms.Timer attackTimer1;
   }
 }
 
