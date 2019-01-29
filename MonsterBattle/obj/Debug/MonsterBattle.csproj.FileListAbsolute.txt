@@ -1,0 +1,10 @@
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\bin\Debug\MonsterBattle.exe.config
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\bin\Debug\MonsterBattle.exe
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\bin\Debug\MonsterBattle.pdb
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csprojAssemblyReference.cache
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.BattleForm.resources
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.Properties.Resources.resources
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csproj.GenerateResource.cache
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csproj.CoreCompileInputs.cache
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.exe
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.pdb
