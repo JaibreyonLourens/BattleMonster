@@ -14,6 +14,7 @@ namespace MonsterBattle
     {
         Random randomGenerator;
         bool enemyDead;
+        bool enemysTurn = false;
 
         public BattleForm()
         {
@@ -22,32 +23,28 @@ namespace MonsterBattle
             randomGenerator = new Random();
         }
 
-        private void attackButton_Click(object sender, EventArgs e)
+        private void turnBasedAttack()
         {
-            if(!enemyDead)
+            if (enemysTurn)
             {
-                enemyPictureBox.Tag = enemyPictureBox.Image;
-                enemyPictureBox.Image = Properties.Resources.attack_lightning;
-                
-                attackButton.Enabled = false;
-                attackTimer.Start();
-
-                screenShakeTimer.Start();
+                MessageBox.Show("attack");
+                enemysTurn = false;
             }
             else
             {
-                MessageBox.Show("You can not strike Charizard whilst he is already down.");
+                attackButton.Enabled = false;
+                attackButton1.Enabled = false;
+                
             }
         }
 
         private void attackTimer_Tick(object sender, EventArgs e)
         {
-
             screenShakeTimer.Stop();
             attackTimer.Stop();
             attackButton.Enabled = true;
 
-            enemyPictureBox.Image = (Image) enemyPictureBox.Tag;
+            enemyPictureBox.Image = (Image)enemyPictureBox.Tag;
 
             enemyHealthPictureBox.Width -= 20;
 
@@ -65,40 +62,78 @@ namespace MonsterBattle
             this.Left += randomGenerator.Next(-5, 6);
         }
 
-    private void attackButton1_Click(object sender, EventArgs e)
-    {
-        if (!enemyDead)
+        private void attackButton_Click(object sender, EventArgs e)
         {
-          enemyPictureBox.Tag = enemyPictureBox.Image;
-          enemyPictureBox.Image = Properties.Resources.attack_lightning;
+            if (!enemysTurn)
+            {
+                if (!enemyDead)
+                {
+                    enemyPictureBox.Tag = enemyPictureBox.Image;
+                    enemyPictureBox.Image = Properties.Resources.attack_lightning;
 
-          attackButton1.Enabled = false;
-          attackTimer1.Start();
+                    attackButton.Enabled = false;
+                    attackTimer.Start();
 
-          screenShakeTimer.Start();
+                    screenShakeTimer.Start();
+                }
+                else
+                {
+                    MessageBox.Show("You can not strike Charizard whilst he is already down.");
+                }
+                enemysTurn = true;
+                turnBasedAttack();
+            }
+            else
+            {
+                attackButton.Enabled = true;
+                attackButton1.Enabled = true;
+            }
         }
-        else
+
+        private void attackButton1_Click(object sender, EventArgs e)
         {
-          MessageBox.Show("You already won CALM DOWN!!");
+            if (!enemysTurn)
+            {
+                if (!enemyDead)
+                {
+                    enemyPictureBox.Tag = enemyPictureBox.Image;
+                    enemyPictureBox.Image = Properties.Resources.attack_lightning;
+
+                    attackButton1.Enabled = false;
+                    attackTimer1.Start();
+
+                    screenShakeTimer.Start();
+                }
+                else
+                {
+                    MessageBox.Show("You already won CALM DOWN!!");
+                }
+                enemysTurn = true;
+                turnBasedAttack();
+            }
+            else
+            {
+                attackButton.Enabled = true;
+                attackButton1.Enabled = true;
+            }
+        }
+
+        private void attackTimer1_Tick(object sender, EventArgs e)
+        {
+              screenShakeTimer.Stop();
+              attackTimer1.Stop();
+              attackButton1.Enabled = true;
+
+              enemyPictureBox.Image = (Image)enemyPictureBox.Tag;
+
+              enemyHealthPictureBox.Width -= 35;
+
+              if (enemyHealthPictureBox.Width <= 0)
+              {
+                MessageBox.Show("Charizard has fainted!");
+                enemyDead = true;
+                enemyPictureBox.Image = null;
+              }
         }
     }
-
-    private void attackTimer1_Tick(object sender, EventArgs e)
-    {
-      screenShakeTimer.Stop();
-      attackTimer1.Stop();
-      attackButton1.Enabled = true;
-
-      enemyPictureBox.Image = (Image)enemyPictureBox.Tag;
-
-      enemyHealthPictureBox.Width -= 35;
-
-      if (enemyHealthPictureBox.Width <= 0)
-      {
-        MessageBox.Show("Charizard has fainted!");
-        enemyDead = true;
-        enemyPictureBox.Image = null;
-      }
-    }
-  }
 }
