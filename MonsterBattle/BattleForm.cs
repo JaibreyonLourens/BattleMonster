@@ -13,6 +13,7 @@ namespace MonsterBattle
     public partial class BattleForm : Form
     {
         Random randomGenerator;
+        
         bool enemyDead;
         bool enemysTurn = false;
         bool playerDead;
@@ -38,23 +39,20 @@ namespace MonsterBattle
 
                     screenShakeTimer.Start();
                 }
-                
             }
-            
         }
+        
         private void turnBasedAttack()
         {
             if (enemysTurn)
             {
                 enemyAttack();
-                
                 enemysTurn = false;
             }
             else
             {
                 attackButton.Enabled = false;
                 attackButton1.Enabled = false;
-                
             }
         }
 
@@ -96,7 +94,6 @@ namespace MonsterBattle
 
                     screenShakeTimer.Start();
                 }
-                
                 else
                 {
                     MessageBox.Show("You can not strike Charizard whilst he is already down.");
@@ -109,7 +106,6 @@ namespace MonsterBattle
                 attackButton.Enabled = true;
                 attackButton1.Enabled = true;
             }
-         
         }
 
         private void attackButton1_Click(object sender, EventArgs e)
