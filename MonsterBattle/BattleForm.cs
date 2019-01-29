@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +24,7 @@ namespace MonsterBattle
 
         private void attackButton_Click(object sender, EventArgs e)
         {
-            if (!enemyDead)
+            feif (!enemyDead)
             {
                 enemyPictureBox.Tag = enemyPictureBox.Image;
                 enemyPictureBox.Image = Properties.Resources.attack_lightning;
