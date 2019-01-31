@@ -18,6 +18,8 @@ namespace MonsterBattle
         bool enemysTurn = false;
         bool playerDead;
 
+        int pokemonLvl = 1;
+
 
         public BattleForm()
         {
@@ -26,6 +28,27 @@ namespace MonsterBattle
             randomGenerator = new Random();
         }
 
+        private void reviveEnemy()
+        {
+            if (enemyDead)
+            {
+              if(MessageBox.Show("Do you want to fight further?","Fighting", MessageBoxButtons.YesNo) == DialogResult.Yes)
+              {
+                    enemyDead = false;
+                    enemyHealthPictureBox.Width = 90;
+                    enemyPictureBox.Image = Properties.Resources.pokemon_charizard_front;
+              }
+                else
+                {
+                    MessageBox.Show("Thank you for playing!");
+                    this.Close();
+                }
+                
+            }
+
+        }
+
+
         private void enemyAttack()
         {
             if (!enemyDead)
@@ -33,7 +56,7 @@ namespace MonsterBattle
                 if (!playerDead)
                 {
                     friendlyPictureBox.Tag = friendlyPictureBox.Image;
-                    friendlyPictureBox.Image = Properties.Resources.attack_lightning;
+                    friendlyPictureBox.Image = Properties.Resources.flameburst;
 
                     enemyAttackTimer.Start();
 
@@ -97,6 +120,7 @@ namespace MonsterBattle
                 else
                 {
                     MessageBox.Show("You can not strike Charizard whilst he is already down.");
+
                 }
                 enemysTurn = true;
                 turnBasedAttack();
@@ -138,6 +162,7 @@ namespace MonsterBattle
 
         private void attackTimer1_Tick(object sender, EventArgs e)
         {
+           
               screenShakeTimer.Stop();
               attackTimer1.Stop();
               attackButton1.Enabled = true;
@@ -151,7 +176,18 @@ namespace MonsterBattle
                 MessageBox.Show("Charizard has fainted!");
                 enemyDead = true;
                 enemyPictureBox.Image = null;
+                friendlyExpBarPictureBox.Width += 118;
+                if(friendlyExpBarPictureBox.Width >= 118)
+                {
+                    MessageBox.Show("Your zapdos has leveled up");
+                    label1.Text = (pokemonLvl += 1).ToString();
+                    friendlyExpBarPictureBox.Width = 0;
+                }
+                reviveEnemy();
+
               }
+
+              
         }
 
         private void enemyAttackTimer_Tick(object sender, EventArgs e)
@@ -169,6 +205,25 @@ namespace MonsterBattle
                 playerDead = true;
                 friendlyPictureBox.Image = null;
             }
+        }
+
+        private void BattleForm_Load(object sender, EventArgs e)
+        {
+            
+
+            /*friendlyExpBarPictureBox.Width = 0;
+            label1.Text = pokemonLvl.ToString();
+            enemyPictureBox.Image = Properties.Resources.pokemon_charizard_front;
+            friendlyPictureBox.Image = Properties.Resources.pokemon_zapdos_back;*/
+        }
+
+        private void BattleForm_Load_1(object sender, EventArgs e)
+        {
+            friendlyExpBarPictureBox.Width = 0;
+            label1.Text = pokemonLvl.ToString();
+            enemyPictureBox.Image = Properties.Resources.pokemon_charizard_front;
+            friendlyPictureBox.Image = Properties.Resources.pokemon_zapdos_back;
+
         }
     }
 }
