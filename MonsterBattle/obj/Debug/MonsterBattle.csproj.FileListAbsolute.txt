@@ -38,3 +38,4 @@ D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\Monste
 D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.csproj.CoreCompileInputs.cache
 D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.exe
 D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.pdb
+D:\School\MonsterBattle_GapWeek\MonsterBattle\BattleMonster\BattleMonster\MonsterBattle\obj\Debug\MonsterBattle.MenuForm.resources

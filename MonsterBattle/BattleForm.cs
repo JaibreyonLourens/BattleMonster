@@ -17,11 +17,22 @@ namespace MonsterBattle
         bool enemyDead;
         bool enemysTurn = false;
         bool playerDead;
+        string[] availablePokemon = new string[] 
+        {
+        
+            
+                "Rayquaza",
+                "Charizard",
+                "Blaziken",
+                "Goodra"
+            
+        };
 
         int pokemonLvl = 1;
+        
 
 
-        public BattleForm()
+    public BattleForm()
         {
             InitializeComponent();
 
@@ -29,7 +40,9 @@ namespace MonsterBattle
         }
 
         private void reviveEnemy()
-        {
+        {  
+           
+
             if (enemyDead)
             {
               if(MessageBox.Show("Do you want to fight further?","Fighting", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -45,7 +58,41 @@ namespace MonsterBattle
                 }
                 
             }
+            
+         
 
+        }
+
+        private void levelUp()
+        {
+            if (friendlyExpBarPictureBox.Width >= 118)
+            {
+                MessageBox.Show("Your Pokemon has leveled up");
+                label1.Text = (pokemonLvl += 1).ToString();
+                friendlyExpBarPictureBox.Width = 0;
+            }
+        }
+
+
+        private void pickNewPokemon()
+        {
+           
+
+            MenuForm menu = new MenuForm();
+
+            string selectedPokemon = menu.selectedPokemon;
+            if (playerDead)
+            {
+                if (MessageBox.Show("You're Pokemon has fainted Do you want to continue?", "Fighting", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    menu.ShowDialog();
+                    friendlyPictureBox.Image = Properties.Resources.Rayquaza_Back;
+                    friendlyHealthPictureBox.Width = 100;
+                    friendlyExpBarPictureBox.Width = 0;
+                    
+
+                }
+            }
         }
 
 
@@ -94,6 +141,8 @@ namespace MonsterBattle
                 MessageBox.Show("Charizard has fainted!");
                 enemyDead = true;
                 enemyPictureBox.Image = null;
+                levelUp();
+                reviveEnemy();
             }
         }
 
@@ -177,12 +226,7 @@ namespace MonsterBattle
                 enemyDead = true;
                 enemyPictureBox.Image = null;
                 friendlyExpBarPictureBox.Width += 118;
-                if(friendlyExpBarPictureBox.Width >= 118)
-                {
-                    MessageBox.Show("Your zapdos has leveled up");
-                    label1.Text = (pokemonLvl += 1).ToString();
-                    friendlyExpBarPictureBox.Width = 0;
-                }
+                levelUp();
                 reviveEnemy();
 
               }
@@ -201,10 +245,12 @@ namespace MonsterBattle
 
             if (friendlyHealthPictureBox.Width <= 0)
             {
-                MessageBox.Show("Zapdos has fainted!");
+                MessageBox.Show("Your Pokemon fainted.");
                 playerDead = true;
                 friendlyPictureBox.Image = null;
+                pickNewPokemon();
             }
+            
         }
 
         private void BattleForm_Load(object sender, EventArgs e)
@@ -224,6 +270,17 @@ namespace MonsterBattle
             enemyPictureBox.Image = Properties.Resources.pokemon_charizard_front;
             friendlyPictureBox.Image = Properties.Resources.pokemon_zapdos_back;
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void switchPokemonButton_Click(object sender, EventArgs e)
+        {
+            MenuForm menu = new MenuForm();
+            menu.ShowDialog();
         }
     }
 }

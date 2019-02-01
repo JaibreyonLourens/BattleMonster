@@ -159,5 +159,15 @@ namespace MonsterBattle.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rayquaza_Back {
+            get {
+                object obj = ResourceManager.GetObject("Rayquaza_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

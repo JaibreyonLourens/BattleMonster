@@ -33,6 +33,7 @@
             this.attackButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.friendlyExpBarPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.friendlyHealthPictureBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -45,15 +46,15 @@
             this.attackButton1 = new System.Windows.Forms.Button();
             this.attackTimer1 = new System.Windows.Forms.Timer(this.components);
             this.enemyAttackTimer = new System.Windows.Forms.Timer(this.components);
-            this.friendlyExpBarPictureBox = new System.Windows.Forms.PictureBox();
+            this.switchPokemonButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.friendlyExpBarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.friendlyHealthPictureBox)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.enemyHealthPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.friendlyPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.friendlyExpBarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // attackButton
@@ -80,6 +81,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(640, 276);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
@@ -94,6 +96,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(255, 65);
             this.panel3.TabIndex = 3;
+            // 
+            // friendlyExpBarPictureBox
+            // 
+            this.friendlyExpBarPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.friendlyExpBarPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.friendlyExpBarPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("friendlyExpBarPictureBox.Image")));
+            this.friendlyExpBarPictureBox.Location = new System.Drawing.Point(77, 56);
+            this.friendlyExpBarPictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.friendlyExpBarPictureBox.Name = "friendlyExpBarPictureBox";
+            this.friendlyExpBarPictureBox.Size = new System.Drawing.Size(157, 5);
+            this.friendlyExpBarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.friendlyExpBarPictureBox.TabIndex = 6;
+            this.friendlyExpBarPictureBox.TabStop = false;
             // 
             // label1
             // 
@@ -160,7 +175,6 @@
             // 
             this.enemyPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.enemyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.enemyPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("enemyPictureBox.Image")));
             this.enemyPictureBox.Location = new System.Drawing.Point(385, 15);
             this.enemyPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.enemyPictureBox.Name = "enemyPictureBox";
@@ -173,7 +187,6 @@
             // 
             this.friendlyPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.friendlyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.friendlyPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("friendlyPictureBox.Image")));
             this.friendlyPictureBox.Location = new System.Drawing.Point(79, 175);
             this.friendlyPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.friendlyPictureBox.Name = "friendlyPictureBox";
@@ -212,24 +225,22 @@
             // 
             this.enemyAttackTimer.Tick += new System.EventHandler(this.enemyAttackTimer_Tick);
             // 
-            // friendlyExpBarPictureBox
+            // switchPokemonButton
             // 
-            this.friendlyExpBarPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.friendlyExpBarPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.friendlyExpBarPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("friendlyExpBarPictureBox.Image")));
-            this.friendlyExpBarPictureBox.Location = new System.Drawing.Point(77, 56);
-            this.friendlyExpBarPictureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.friendlyExpBarPictureBox.Name = "friendlyExpBarPictureBox";
-            this.friendlyExpBarPictureBox.Size = new System.Drawing.Size(157, 5);
-            this.friendlyExpBarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.friendlyExpBarPictureBox.TabIndex = 6;
-            this.friendlyExpBarPictureBox.TabStop = false;
+            this.switchPokemonButton.Location = new System.Drawing.Point(495, 319);
+            this.switchPokemonButton.Name = "switchPokemonButton";
+            this.switchPokemonButton.Size = new System.Drawing.Size(133, 42);
+            this.switchPokemonButton.TabIndex = 4;
+            this.switchPokemonButton.Text = "Switch Pokemon";
+            this.switchPokemonButton.UseVisualStyleBackColor = true;
+            this.switchPokemonButton.Click += new System.EventHandler(this.switchPokemonButton_Click);
             // 
             // BattleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 373);
+            this.Controls.Add(this.switchPokemonButton);
             this.Controls.Add(this.attackButton1);
             this.Controls.Add(this.attackButton);
             this.Controls.Add(this.panel1);
@@ -240,13 +251,13 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.friendlyExpBarPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.friendlyHealthPictureBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.enemyHealthPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.friendlyPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.friendlyExpBarPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,6 +280,7 @@
     private System.Windows.Forms.Timer attackTimer1;
         private System.Windows.Forms.Timer enemyAttackTimer;
         private System.Windows.Forms.PictureBox friendlyExpBarPictureBox;
+        private System.Windows.Forms.Button switchPokemonButton;
     }
 }
 
