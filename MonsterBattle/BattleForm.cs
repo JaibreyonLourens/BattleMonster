@@ -39,6 +39,20 @@ namespace MonsterBattle
             randomGenerator = new Random();
         }
 
+        private void restartBattle()
+        {
+            enemyPictureBox.Image = Properties.Resources.pokemon_charizard_front;
+            friendlyPictureBox.Image = Properties.Resources.pokemon_zapdos_back;
+            friendlyHealthPictureBox.Width = 90;
+            pokemonLvl = 1;
+            enemyHealthPictureBox.Width = 90;
+            friendlyExpBarPictureBox.Width = 0;
+            label1.Text = pokemonLvl.ToString();
+        }
+
+
+
+
         private void reviveEnemy()
         {  
            
@@ -53,8 +67,7 @@ namespace MonsterBattle
               }
                 else
                 {
-                    MessageBox.Show("Thank you for playing!");
-                    this.Close();
+                    restartBattle();
                 }
                 
             }
@@ -83,14 +96,17 @@ namespace MonsterBattle
             string selectedPokemon = menu.selectedPokemon;
             if (playerDead)
             {
-                if (MessageBox.Show("You're Pokemon has fainted Do you want to continue?", "Fighting", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Do you want to switch pokemon?", "Fighting", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    menu.ShowDialog();
-                    friendlyPictureBox.Image = Properties.Resources.Rayquaza_Back;
-                    friendlyHealthPictureBox.Width = 100;
-                    friendlyExpBarPictureBox.Width = 0;
+                    
+                   
+                    
                     
 
+                }
+                else
+                {
+                    restartBattle();
                 }
             }
         }
