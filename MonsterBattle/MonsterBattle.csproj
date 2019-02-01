@@ -117,6 +117,8 @@
     <None Include="Resources\attack_lightning.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Goodra_Front.png" />
+    <None Include="Resources\Charizard_Back.png" />
     <Content Include="Resources\flameburst.gif" />
     <None Include="Resources\Rayquaza_Back.png" />
   </ItemGroup>

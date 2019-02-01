@@ -39,20 +39,43 @@ namespace MonsterBattle
             randomGenerator = new Random();
         }
 
+        private void newPokemon()
+        {
+            friendlyHealthPictureBox.Width = 100;
+            friendlyExpBarPictureBox.Width = 0;
+            pokemonLvl = 1;
+            label1.Text = pokemonLvl.ToString();
+        }
+
         private void restartBattle()
         {
             enemyPictureBox.Image = Properties.Resources.pokemon_charizard_front;
             friendlyPictureBox.Image = Properties.Resources.pokemon_zapdos_back;
-            friendlyHealthPictureBox.Width = 90;
+            friendlyHealthPictureBox.Width = 100;
             pokemonLvl = 1;
-            enemyHealthPictureBox.Width = 90;
+            enemyHealthPictureBox.Width = 100;
             friendlyExpBarPictureBox.Width = 0;
             label1.Text = pokemonLvl.ToString();
         }
 
+        private void enableButtons()
+        {
+            attackButton.Enabled = true;
+            attackButton1.Enabled = true;
+            flameBurstAttackButton.Enabled = true;
+            healPokemonButton.Enabled = true;
+        }
 
-
-
+        private void newEnemy()
+        {
+            if(MessageBox.Show("A goodra appeared Do you want to fight it?", "New enemy Appeared", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                enemyPictureBox.Image = Properties.Resources.Goodra_Front;
+                enemyDead = false;
+                enemyHealthPictureBox.Width = 100;
+            }
+        }
+        
         private void reviveEnemy()
         {  
            
@@ -62,7 +85,7 @@ namespace MonsterBattle
               if(MessageBox.Show("Do you want to fight further?","Fighting", MessageBoxButtons.YesNo) == DialogResult.Yes)
               {
                     enemyDead = false;
-                    enemyHealthPictureBox.Width = 90;
+                    enemyHealthPictureBox.Width = 100;
                     enemyPictureBox.Image = Properties.Resources.pokemon_charizard_front;
               }
                 else
@@ -98,11 +121,11 @@ namespace MonsterBattle
             {
                 if (MessageBox.Show("Do you want to switch pokemon?", "Fighting", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    
-                   
-                    
-                    
-
+                    MessageBox.Show("Please select a pokemon you want to switch to");
+                    attackButton.Enabled = false;
+                    attackButton1.Enabled = false;
+                    flameBurstAttackButton.Enabled = false;
+                    healPokemonButton.Enabled = false;
                 }
                 else
                 {
@@ -158,6 +181,8 @@ namespace MonsterBattle
                 enemyDead = true;
                 enemyPictureBox.Image = null;
                 levelUp();
+                newEnemy();
+
                 reviveEnemy();
             }
         }
@@ -243,6 +268,7 @@ namespace MonsterBattle
                 enemyPictureBox.Image = null;
                 friendlyExpBarPictureBox.Width += 118;
                 levelUp();
+                newEnemy();
                 reviveEnemy();
 
               }
@@ -295,8 +321,45 @@ namespace MonsterBattle
 
         private void switchPokemonButton_Click(object sender, EventArgs e)
         {
-            MenuForm menu = new MenuForm();
-            menu.ShowDialog();
+            if (MessageBox.Show("Do you want to switch to rayquaza?", "Switch", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                friendlyPictureBox.Image = Properties.Resources.Rayquaza_Back;
+                newPokemon();
+                enableButtons();
+            }
+            else
+            {
+                if (MessageBox.Show("Do you want to switch to Charizard?", "Switch", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    friendlyPictureBox.Image = Properties.Resources.Charizard_Back;
+                    newPokemon();
+                    enableButtons();
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you want to switch to Greninja?", "Switch ", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+
+                    }
+                }
+            } 
+            
+           
+
+            
+
+           
+        }
+
+        private void healPokemonButton_Click(object sender, EventArgs e)
+        {
+            if(friendlyHealthPictureBox.Width >= 117)
+            {
+                MessageBox.Show("You're healt is already full.");
+            }
+            
+           
+
         }
     }
 }

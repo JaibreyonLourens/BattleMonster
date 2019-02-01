@@ -133,9 +133,29 @@ namespace MonsterBattle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Charizard_Back {
+            get {
+                object obj = ResourceManager.GetObject("Charizard_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flameburst {
             get {
                 object obj = ResourceManager.GetObject("flameburst", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Goodra_Front {
+            get {
+                object obj = ResourceManager.GetObject("Goodra_Front", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -47,6 +47,8 @@
             this.attackTimer1 = new System.Windows.Forms.Timer(this.components);
             this.enemyAttackTimer = new System.Windows.Forms.Timer(this.components);
             this.switchPokemonButton = new System.Windows.Forms.Button();
+            this.healPokemonButton = new System.Windows.Forms.Button();
+            this.flameBurstAttackButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.friendlyExpBarPictureBox)).BeginInit();
@@ -126,10 +128,11 @@
             this.friendlyHealthPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.friendlyHealthPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.friendlyHealthPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("friendlyHealthPictureBox.Image")));
-            this.friendlyHealthPictureBox.Location = new System.Drawing.Point(114, 28);
+            this.friendlyHealthPictureBox.Location = new System.Drawing.Point(117, 28);
             this.friendlyHealthPictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.friendlyHealthPictureBox.MaximumSize = new System.Drawing.Size(117, 7);
             this.friendlyHealthPictureBox.Name = "friendlyHealthPictureBox";
-            this.friendlyHealthPictureBox.Size = new System.Drawing.Size(120, 10);
+            this.friendlyHealthPictureBox.Size = new System.Drawing.Size(117, 7);
             this.friendlyHealthPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.friendlyHealthPictureBox.TabIndex = 5;
             this.friendlyHealthPictureBox.TabStop = false;
@@ -165,6 +168,7 @@
             this.enemyHealthPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("enemyHealthPictureBox.Image")));
             this.enemyHealthPictureBox.Location = new System.Drawing.Point(99, 34);
             this.enemyHealthPictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.enemyHealthPictureBox.MaximumSize = new System.Drawing.Size(120, 6);
             this.enemyHealthPictureBox.Name = "enemyHealthPictureBox";
             this.enemyHealthPictureBox.Size = new System.Drawing.Size(120, 6);
             this.enemyHealthPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -227,19 +231,40 @@
             // 
             // switchPokemonButton
             // 
-            this.switchPokemonButton.Location = new System.Drawing.Point(495, 319);
+            this.switchPokemonButton.Location = new System.Drawing.Point(477, 283);
             this.switchPokemonButton.Name = "switchPokemonButton";
-            this.switchPokemonButton.Size = new System.Drawing.Size(133, 42);
+            this.switchPokemonButton.Size = new System.Drawing.Size(163, 53);
             this.switchPokemonButton.TabIndex = 4;
             this.switchPokemonButton.Text = "Switch Pokemon";
             this.switchPokemonButton.UseVisualStyleBackColor = true;
             this.switchPokemonButton.Click += new System.EventHandler(this.switchPokemonButton_Click);
             // 
+            // healPokemonButton
+            // 
+            this.healPokemonButton.Location = new System.Drawing.Point(16, 332);
+            this.healPokemonButton.Name = "healPokemonButton";
+            this.healPokemonButton.Size = new System.Drawing.Size(156, 37);
+            this.healPokemonButton.TabIndex = 6;
+            this.healPokemonButton.Text = "Heal";
+            this.healPokemonButton.UseVisualStyleBackColor = true;
+            this.healPokemonButton.Click += new System.EventHandler(this.healPokemonButton_Click);
+            // 
+            // flameBurstAttackButton
+            // 
+            this.flameBurstAttackButton.Location = new System.Drawing.Point(180, 332);
+            this.flameBurstAttackButton.Name = "flameBurstAttackButton";
+            this.flameBurstAttackButton.Size = new System.Drawing.Size(156, 37);
+            this.flameBurstAttackButton.TabIndex = 7;
+            this.flameBurstAttackButton.Text = "Flame Burst";
+            this.flameBurstAttackButton.UseVisualStyleBackColor = true;
+            // 
             // BattleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 373);
+            this.ClientSize = new System.Drawing.Size(640, 463);
+            this.Controls.Add(this.flameBurstAttackButton);
+            this.Controls.Add(this.healPokemonButton);
             this.Controls.Add(this.switchPokemonButton);
             this.Controls.Add(this.attackButton1);
             this.Controls.Add(this.attackButton);
@@ -281,6 +306,8 @@
         private System.Windows.Forms.Timer enemyAttackTimer;
         private System.Windows.Forms.PictureBox friendlyExpBarPictureBox;
         private System.Windows.Forms.Button switchPokemonButton;
+        private System.Windows.Forms.Button healPokemonButton;
+        private System.Windows.Forms.Button flameBurstAttackButton;
     }
 }
 

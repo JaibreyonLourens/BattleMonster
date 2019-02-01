@@ -44,6 +44,7 @@ namespace MonsterBattle
         private void selectPokemonButton_Click(object sender, EventArgs e)
         {
             selectedPokemon = pokemonListView.SelectedItems[0].Text ;
+            
             this.Close();
            
         }
@@ -51,6 +52,12 @@ namespace MonsterBattle
         private void MenuForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void swicthRayquazaButton_Click(object sender, EventArgs e)
+        {
+            selectedPokemon = available_pokemon[0];
+            
         }
     }
 }

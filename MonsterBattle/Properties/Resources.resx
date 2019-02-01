@@ -151,4 +151,10 @@
   <data name="Rayquaza_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rayquaza_Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Charizard_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Charizard_Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Goodra_Front" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Goodra_Front.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
